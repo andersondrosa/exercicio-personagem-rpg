@@ -15,10 +15,10 @@ class Personagem {
     // Habilidade 1
     this.habilidades[0] = new Habilidade(this, manaHab1, 4);
 
-    // Habilidade 1
+    // Habilidade 2
     this.habilidades[1] = new Habilidade(this, manaHab2, 4);
 
-    // Habilidade 1
+    // Habilidade 3
     this.habilidades[2] = new Habilidade(this, manaHab3, 4);
 
     // Habilidade 4 - ULTIMATE com condicional

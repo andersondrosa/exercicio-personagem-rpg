@@ -1,11 +1,12 @@
 {
-  "name": "Hero",
+  "name": "RPG - Hero",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "nodemon": "^2.0.7"
   },
+  "author": "Anderson D. Rosa <andersondrosa@outlook.com>",
   "scripts": {
     "test": "nodemon index.js"
   }
