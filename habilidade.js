@@ -1,9 +1,9 @@
 class Habilidade {
   regras = {};
+  nivel = 0;
   constructor(personagem, baseMana, maxNivel, regras = {}) {
     this.personagem = personagem;
     this.baseMana = baseMana;
-    this.nivel = 0;
     this.maxNivel = maxNivel;
     this.regras = regras;
   }
