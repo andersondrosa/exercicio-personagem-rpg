@@ -78,7 +78,16 @@ class Personagem {
     return (this.bonus -= bonus);
   }
 
+  useXP(xp) {
+    this.xp -= xp;
+  }
+
   // PRIVADAS ------------------------------------------------------------------
+
+  addNivel(niveis) {
+    this.nivel += niveis;
+    this.bonus += niveis;
+  }
 
   getNiveisValidos() {
     const niveis = Math.floor(this.xp / 100);
@@ -94,12 +103,7 @@ class Personagem {
     // Acrescenta os níveis ao nivel atual e adiciona os bonus para manas
     this.addNivel(niveis);
     // Remove a quantidade de XP que foi usado
-    this.xp -= niveis * 100;
-  }
-
-  addNivel(niveis) {
-    this.nivel += niveis;
-    this.bonus += niveis;
+    this.useXP(niveis * 100);
   }
 }
 
