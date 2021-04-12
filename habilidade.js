@@ -47,7 +47,7 @@ class Habilidade {
   }
 
   validarUso() {
-    if (!(this.nivel > 0)) return false;
+    if (this.nivel == 0) return false;
     if (this.personagem.getMana() >= this.getCustoMana()) return true;
   }
 }
