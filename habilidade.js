@@ -1,11 +1,11 @@
 class Habilidade {
-  regras = {};
+  nivelGT = 0;
   nivel = 0;
-  constructor(personagem, baseMana, maxNivel, regras = {}) {
+  constructor(personagem, baseMana, maxNivel, nivelGT = 0) {
     this.personagem = personagem;
     this.baseMana = baseMana;
     this.maxNivel = maxNivel;
-    this.regras = regras;
+    this.nivelGT = nivelGT;
   }
 
   // PUBLICAS ------------------------------------------------------------------
@@ -33,11 +33,8 @@ class Habilidade {
 
     if (this.nivel == this.maxNivel) return false;
 
-    // Se a habilidade nao possui regras, retorna true
-    if (!this.regras) return true;
-
     // se possui e nao passar, retorna falso
-    if (this.regras.nivelGT && p.getNivel() < this.regras.nivelGT) return false;
+    if (this.nivelGT > 0 && p.getNivel() < this.nivelGT) return false;
 
     return true;
   }

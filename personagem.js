@@ -22,9 +22,7 @@ class Personagem {
     this.habilidades[2] = new Habilidade(this, manaHab3, 4);
 
     // Habilidade 4 - ULTIMATE com condicional
-    this.habilidades[3] = new Habilidade(this, manaHab4, 3, {
-      nivelGT: 6, // GT => greater than, maior que
-    });
+    this.habilidades[3] = new Habilidade(this, manaHab4, 3, 6);
   }
 
   // PUBLICAS ------------------------------------------------------------------
