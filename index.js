@@ -85,96 +85,97 @@ function testarPersonagem() {
     !p.usarHabilidade(3)
   );
 
-  // poção
-  p.consumirPocao(); // 440/500
+  // console.log(!p.usarHabilidade(3));
+  // // poção
+  // p.consumirPocao(); // 440/500
 
-  testesCorretos += rodarTeste(
-    "Personagem pode recuperar mana com poção",
-    p.usarHabilidade(3)
-  );
-  p.consumirPocao(); // mana 500/500
-  p.consumirPocao(); // tomar outras vezes nao deveria deixar passar dos 500
-  p.consumirPocao();
-  p.consumirPocao();
-  // mana 500/500
-  p.usarHabilidade(3);
-  p.usarHabilidade(3);
-  p.usarHabilidade(1);
-  // mana 0/500
+  // testesCorretos += rodarTeste(
+  //   "Personagem pode recuperar mana com poção",
+  //   p.usarHabilidade(3)
+  // );
+  // p.consumirPocao(); // mana 500/500
+  // p.consumirPocao(); // tomar outras vezes nao deveria deixar passar dos 500
+  // p.consumirPocao();
+  // p.consumirPocao();
+  // // mana 500/500
+  // p.usarHabilidade(3);
+  // p.usarHabilidade(3);
+  // p.usarHabilidade(1);
+  // // mana 0/500
 
-  testesCorretos += rodarTeste(
-    "poção não recupera além da mana máxima",
-    !p.usarHabilidade(2)
-  );
+  // testesCorretos += rodarTeste(
+  //   "poção não recupera além da mana máxima",
+  //   !p.usarHabilidade(2)
+  // );
 
-  // Niveis mÃ¡ximos
-  p.adicionarXP(2500);
+  // // Niveis mÃ¡ximos
+  // p.adicionarXP(2500);
 
-  testesCorretos += rodarTeste(
-    "não é possível passar do nível 25",
-    p.getNivel() == 25
-  );
-  // habilidades ainda 1 1 1 1
-  p.melhorarHabilidade(0);
-  p.melhorarHabilidade(0);
+  // testesCorretos += rodarTeste(
+  //   "não é possível passar do nível 25",
+  //   p.getNivel() == 25
+  // );
+  // // habilidades ainda 1 1 1 1
+  // p.melhorarHabilidade(0);
+  // p.melhorarHabilidade(0);
 
-  testesCorretos += rodarTeste(
-    "Habilidade 0 chega ao nível 4",
-    p.melhorarHabilidade(0)
-  );
+  // testesCorretos += rodarTeste(
+  //   "Habilidade 0 chega ao nível 4",
+  //   p.melhorarHabilidade(0)
+  // );
 
-  testesCorretos += rodarTeste(
-    "Habilidade 0 não passa do nível 4",
-    !p.melhorarHabilidade(0)
-  );
-  p.melhorarHabilidade(1);
-  p.melhorarHabilidade(1);
+  // testesCorretos += rodarTeste(
+  //   "Habilidade 0 não passa do nível 4",
+  //   !p.melhorarHabilidade(0)
+  // );
+  // p.melhorarHabilidade(1);
+  // p.melhorarHabilidade(1);
 
-  testesCorretos += rodarTeste(
-    "Habilidade 1 chega ao nível 4",
-    p.melhorarHabilidade(1)
-  );
+  // testesCorretos += rodarTeste(
+  //   "Habilidade 1 chega ao nível 4",
+  //   p.melhorarHabilidade(1)
+  // );
 
-  testesCorretos += rodarTeste(
-    "Habilidade 1 não passa do nível 4",
-    !p.melhorarHabilidade(1)
-  );
-  p.melhorarHabilidade(2);
-  p.melhorarHabilidade(2);
+  // testesCorretos += rodarTeste(
+  //   "Habilidade 1 não passa do nível 4",
+  //   !p.melhorarHabilidade(1)
+  // );
+  // p.melhorarHabilidade(2);
+  // p.melhorarHabilidade(2);
 
-  testesCorretos += rodarTeste(
-    "Habilidade 2 chega ao nível 4",
-    p.melhorarHabilidade(2)
-  );
+  // testesCorretos += rodarTeste(
+  //   "Habilidade 2 chega ao nível 4",
+  //   p.melhorarHabilidade(2)
+  // );
 
-  testesCorretos += rodarTeste(
-    "Habilidade 2 não passa do nível 4",
-    !p.melhorarHabilidade(2)
-  );
-  p.melhorarHabilidade(3);
+  // testesCorretos += rodarTeste(
+  //   "Habilidade 2 não passa do nível 4",
+  //   !p.melhorarHabilidade(2)
+  // );
+  // p.melhorarHabilidade(3);
 
-  testesCorretos += rodarTeste(
-    "Habilidade 3 chega ao nível 3",
-    p.melhorarHabilidade(3)
-  );
+  // testesCorretos += rodarTeste(
+  //   "Habilidade 3 chega ao nível 3",
+  //   p.melhorarHabilidade(3)
+  // );
 
-  testesCorretos += rodarTeste(
-    "Habilidade 3 não passa do nível 3",
-    !p.melhorarHabilidade(3)
-  );
+  // testesCorretos += rodarTeste(
+  //   "Habilidade 3 não passa do nível 3",
+  //   !p.melhorarHabilidade(3)
+  // );
 
-  p.consumirPocao();
-  p.consumirPocao();
+  // p.consumirPocao();
+  // p.consumirPocao();
 
-  // mesmo os 500 de mana não são suficientes
-  // para usar a ult no nivel 3 (200 * 3 = 600)
+  // // mesmo os 500 de mana não são suficientes
+  // // para usar a ult no nivel 3 (200 * 3 = 600)
 
-  testesCorretos += rodarTeste(
-    "Consumo de mana é proporcional ao nível da habilidade",
-    !p.usarHabilidade(3)
-  );
+  // testesCorretos += rodarTeste(
+  //   "Consumo de mana é proporcional ao nível da habilidade",
+  //   !p.usarHabilidade(3)
+  // );
 
-  console.log(`testesCorretos ${testesCorretos}`, `totalTestes ${totalTestes}`);
+  // console.log(`testesCorretos ${testesCorretos}`, `totalTestes ${totalTestes}`);
 }
 
 testarPersonagem();
